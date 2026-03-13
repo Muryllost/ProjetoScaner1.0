@@ -1,54 +1,27 @@
-/* --- ADIÇÕES PARA O MODAL E ÍCONES --- */
-nav button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #121212; color: #ffffff;
+  font-family: sans-serif; text-align: center;
+  display: flex; justify-content: center; align-items: center; height: 100vh;
 }
+.icone-grande { font-size: 60px; color: #00ffcc; margin-bottom: 10px; }
+h1 { margin-bottom: 5px; }
+p { color: #888; margin-bottom: 25px; }
 
-.input-wrapper {
-  margin: 15px auto;
-  max-width: 300px;
-  text-align: left;
-}
-
-.input-wrapper label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-select, input[type="number"] {
+.input-wrapper { margin: 15px auto; max-width: 300px; text-align: left; }
+.input-wrapper label { display: block; margin-bottom: 5px; font-size: 14px; color: #aaa; }
+input[type="text"] {
   width: 100%; padding: 12px; border-radius: 8px;
   border: 1px solid #444; background: #222; color: white;
   font-size: 16px; outline: none;
 }
-select:focus, input[type="number"]:focus { border-color: var(--primary); }
+input[type="text"]:focus { border-color: #00ffcc; }
 
-/* Estilo do Dialog (Modal) */
-dialog {
-  margin: auto;
-  padding: 25px;
-  border: 1px solid var(--primary);
-  border-radius: 12px;
-  background: var(--bg-card);
-  color: white;
-  max-width: 90%;
-  width: 350px;
+.btn {
+  margin-top: 15px; padding: 12px 25px;
+  background: #00ffcc; color: #000;
+  border: none; border-radius: 8px;
+  cursor: pointer; font-weight: bold; font-size: 15px;
+  width: 100%; max-width: 300px;
 }
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.modal-botoes {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-.modal-botoes button {
-  margin-top: 0;
-}
-
-.tag-entrada { color: #00ffcc; font-weight: bold; }
-.tag-saida { color: #ff4c4c; font-weight: bold; }
+.btn:hover { background: #00ccaa; }

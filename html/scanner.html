@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escanear - Estoque</title>
+    <link rel="stylesheet" href="../css/scanner.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/html5-qrcode"></script>
+  </head>
+  <body>
+    <header>
+      <a href="scanner.html" class="active"
+        ><span class="material-symbols-outlined">qr_code_scanner</span
+        >Escanear</a
+      >
+      <a href="estoque.html"
+        ><span class="material-symbols-outlined">inventory_2</span>Estoque</a
+      >
+      <button class="logout" id="btn-logout">
+        <span class="material-symbols-outlined">logout</span>Sair
+      </button>
+    </header>
+
+    <main>
+      <h2>Leitor de QR Code</h2>
+      <p>Operador: <strong id="nome-operador"></strong></p>
+
+      <div id="reader"></div>
+
+      <button class="btn btn-danger" id="btn-parar-camera">Parar Câmera</button>
+      <button class="btn" id="btn-ligar-camera">Ligar Câmera</button>
+    </main>
+
+    <dialog id="modal-movimento">
+      <form method="dialog" id="form-movimento">
+        <h2>Registrar Item</h2>
+        <p>Código: <strong id="modal-codigo-lido"></strong></p>
+
+        <div class="input-wrapper">
+          <label>Tipo de Movimentação:</label>
+          <select id="movimento-tipo">
+            <option value="ENTRADA">Entrada (Adicionar)</option>
+            <option value="SAIDA">Saída (Retirar)</option>
+          </select>
+        </div>
+
+        <div class="input-wrapper">
+          <label>Quantidade:</label>
+          <input type="number" id="movimento-qtd" value="1" min="1" required />
+        </div>
+
+        <div class="modal-botoes">
+          <button type="submit" class="btn" id="salvar-movimento">
+            Salvar
+          </button>
+          <button type="button" class="btn btn-danger" id="cancelar-movimento">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="../js/scanner.js"></script>
+  </body>
+</html>

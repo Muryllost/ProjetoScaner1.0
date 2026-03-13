@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estoque - Estoque</title>
+    <link rel="stylesheet" href="../css/estoque.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="scanner.html"
+        ><span class="material-symbols-outlined">qr_code_scanner</span
+        >Escanear</a
+      >
+      <a href="estoque.html" class="active">
+        <span class="material-symbols-outlined">inventory_2</span>Estoque</a
+      >
+      <button class="logout" id="btn-logout">
+        <span class="material-symbols-outlined">logout</span>Sair
+      </button>
+    </header>
+
+    <main>
+      <h2>Histórico de Movimentações</h2>
+      <ul class="lista-estoque" id="lista-produtos"></ul>
+      <button class="btn btn-danger" id="btn-limpar-estoque">
+        Limpar Dados
+      </button>
+    </main>
+
+    <script src="../js/estoque.js"></script>
+  </body>
+</html>

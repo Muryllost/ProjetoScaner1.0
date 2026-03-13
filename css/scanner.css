@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #121212;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+header {
+  background: #1f1f1f;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #00ffcc;
+  margin-bottom: 20px;
+}
+header a {
+  color: #888;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+header a.active {
+  color: #00ffcc;
+  border-bottom: 2px solid #00ffcc;
+}
+header button.logout {
+  background: transparent;
+  border: none;
+  color: #ff4c4c;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+main {
+  padding: 20px;
+}
+#nome-operador {
+  color: #00ffcc;
+}
+#reader {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 3px solid #00ffcc;
+  border-radius: 15px;
+  background: black;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #00ffcc;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 5px;
+}
+.btn-danger {
+  background: #ff4c4c;
+  color: white;
+}
+
+dialog {
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #00ffcc;
+  border-radius: 12px;
+  background: #1f1f1f;
+  color: white;
+  width: 350px;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+#modal-codigo-lido {
+  color: #00ffcc;
+}
+.input-wrapper {
+  margin: 15px 0;
+  text-align: left;
+}
+.input-wrapper label {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+  outline: none;
+}
+.modal-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
