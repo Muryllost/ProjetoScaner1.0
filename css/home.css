@@ -1,0 +1,54 @@
+/* --- ADIÇÕES PARA O MODAL E ÍCONES --- */
+nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.input-wrapper {
+  margin: 15px auto;
+  max-width: 300px;
+  text-align: left;
+}
+
+.input-wrapper label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+select, input[type="number"] {
+  width: 100%; padding: 12px; border-radius: 8px;
+  border: 1px solid #444; background: #222; color: white;
+  font-size: 16px; outline: none;
+}
+select:focus, input[type="number"]:focus { border-color: var(--primary); }
+
+/* Estilo do Dialog (Modal) */
+dialog {
+  margin: auto;
+  padding: 25px;
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  background: var(--bg-card);
+  color: white;
+  max-width: 90%;
+  width: 350px;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.modal-botoes button {
+  margin-top: 0;
+}
+
+.tag-entrada { color: #00ffcc; font-weight: bold; }
+.tag-saida { color: #ff4c4c; font-weight: bold; }
