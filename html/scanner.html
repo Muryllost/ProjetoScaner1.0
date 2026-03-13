@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escanear - Estoque</title>
-    <link rel="stylesheet" href="../css/scanner.css" />
+    <title>Scanner - Logística QR</title>
+    <link rel="stylesheet" href="scanner.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -18,7 +18,8 @@
         >Escanear</a
       >
       <a href="estoque.html"
-        ><span class="material-symbols-outlined">inventory_2</span>Estoque</a
+        ><span class="material-symbols-outlined">local_shipping</span
+        >Logística</a
       >
       <button class="logout" id="btn-logout">
         <span class="material-symbols-outlined">logout</span>Sair
@@ -26,25 +27,56 @@
     </header>
 
     <main>
-      <h2>Leitor de QR Code</h2>
+      <h2>Leitor de Produtos</h2>
       <p>Operador: <strong id="nome-operador"></strong></p>
 
       <div id="reader"></div>
 
-      <button class="btn btn-danger" id="btn-parar-camera">Parar Câmera</button>
-      <button class="btn" id="btn-ligar-camera">Ligar Câmera</button>
+      <button class="btn btn-danger" id="btn-parar-camera">Parar Câmara</button>
+      <button class="btn" id="btn-ligar-camera">Ligar Câmara</button>
     </main>
 
     <dialog id="modal-movimento">
       <form method="dialog" id="form-movimento">
-        <h2>Registrar Item</h2>
-        <p>Código: <strong id="modal-codigo-lido"></strong></p>
+        <h2>Registar Rota</h2>
+        <p>Código Bipado: <strong id="modal-codigo-lido"></strong></p>
+
+        <div class="input-wrapper">
+          <label>Nome do Produto:</label>
+          <input
+            type="text"
+            id="movimento-nome-produto"
+            placeholder="Ex: Monitor Dell"
+            required
+          />
+        </div>
+
+        <div class="row-inputs">
+          <div class="input-wrapper w-50">
+            <label>Origem (Vem de):</label>
+            <input
+              type="text"
+              id="movimento-origem"
+              placeholder="Ex: Fornecedor X"
+              required
+            />
+          </div>
+          <div class="input-wrapper w-50">
+            <label>Destino (Vai para):</label>
+            <input
+              type="text"
+              id="movimento-destino"
+              placeholder="Ex: Setor de TI"
+              required
+            />
+          </div>
+        </div>
 
         <div class="input-wrapper">
           <label>Tipo de Movimentação:</label>
           <select id="movimento-tipo">
-            <option value="ENTRADA">Entrada (Adicionar)</option>
-            <option value="SAIDA">Saída (Retirar)</option>
+            <option value="ENTRADA">Entrada (Adicionar ao Stock)</option>
+            <option value="SAIDA">Saída (Retirar do Stock)</option>
           </select>
         </div>
 
@@ -55,7 +87,7 @@
 
         <div class="modal-botoes">
           <button type="submit" class="btn" id="salvar-movimento">
-            Salvar
+            Salvar Dados
           </button>
           <button type="button" class="btn btn-danger" id="cancelar-movimento">
             Cancelar
@@ -64,6 +96,6 @@
       </form>
     </dialog>
 
-    <script src="../js/scanner.js"></script>
+    <script src="scanner.js"></script>
   </body>
 </html>

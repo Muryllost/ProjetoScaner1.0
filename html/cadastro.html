@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registo - Logística QR</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container-login">
+      <span class="material-symbols-outlined icone-grande">person_add</span>
+      <h1>Novo Operador</h1>
+      <p>Regista a tua identificação para usar o sistema</p>
+
+      <form id="form-cadastro">
+        <div class="input-wrapper">
+          <label for="novo-nome">O teu Nome ou Matrícula:</label>
+          <input
+            type="text"
+            id="novo-nome"
+            placeholder="Escreve o teu nome..."
+            required
+          />
+        </div>
+        <button type="submit" class="btn" id="btn-salvar-cadastro">
+          Salvar Registo
+        </button>
+        <button type="button" class="btn btn-secundario" id="btn-voltar-login">
+          Voltar para o Login
+        </button>
+      </form>
+    </main>
+
+    <script src="cadastro.js"></script>
+  </body>
+</html>

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Estoque</title>
-    <link rel="stylesheet" href="../css/home.css" />
+    <title>Login - Logística QR</title>
+    <link rel="stylesheet" href="login.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -13,12 +13,12 @@
   <body>
     <main class="container-login">
       <span class="material-symbols-outlined icone-grande">inventory</span>
-      <h1>Sistema de Estoque</h1>
-      <p>Identifique-se para começar</p>
+      <h1>Controlo de Logística</h1>
+      <p>Identifica-te para começar</p>
 
       <form id="form-login">
         <div class="input-wrapper">
-          <label for="input-nome">Nome ou Matrícula:</label>
+          <label for="input-nome">Nome do Operador:</label>
           <input
             type="text"
             id="input-nome"
@@ -26,10 +26,15 @@
             required
           />
         </div>
-        <button type="submit" class="btn" id="btn-login">Entrar</button>
+        <button type="submit" class="btn" id="btn-login">
+          Entrar no Sistema
+        </button>
+        <button type="button" class="btn btn-secundario" id="btn-ir-cadastro">
+          Cadastrar Operador
+        </button>
       </form>
     </main>
 
-    <script src="../js/home.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

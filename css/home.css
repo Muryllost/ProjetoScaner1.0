@@ -1,27 +1,81 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: #121212; color: #ffffff;
-  font-family: sans-serif; text-align: center;
-  display: flex; justify-content: center; align-items: center; height: 100vh;
+  /* Fundo marrom escuro bem elegante */
+  background: #3e2723;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.icone-grande { font-size: 60px; color: #00ffcc; margin-bottom: 10px; }
-h1 { margin-bottom: 5px; }
-p { color: #888; margin-bottom: 25px; }
+.icone-grande {
+  font-size: 60px;
+  color: #ffca28;
+  margin-bottom: 10px;
+} /* Ícone amarelo/dourado */
+h1 {
+  margin-bottom: 5px;
+}
+p {
+  color: #d7ccc8;
+  margin-bottom: 25px;
+}
 
-.input-wrapper { margin: 15px auto; max-width: 300px; text-align: left; }
-.input-wrapper label { display: block; margin-bottom: 5px; font-size: 14px; color: #aaa; }
-input[type="text"] {
-  width: 100%; padding: 12px; border-radius: 8px;
-  border: 1px solid #444; background: #222; color: white;
-  font-size: 16px; outline: none;
+.input-wrapper {
+  margin: 15px auto;
+  max-width: 300px;
+  text-align: left;
 }
-input[type="text"]:focus { border-color: #00ffcc; }
+.input-wrapper label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #d7ccc8;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #5d4037;
+  background: #27140f;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+input[type="text"]:focus {
+  border-color: #ffca28;
+}
 
 .btn {
-  margin-top: 15px; padding: 12px 25px;
-  background: #00ffcc; color: #000;
-  border: none; border-radius: 8px;
-  cursor: pointer; font-weight: bold; font-size: 15px;
-  width: 100%; max-width: 300px;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ffca28;
+  color: #3e2723; /* Botão combinando com o fundo */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  max-width: 300px;
 }
-.btn:hover { background: #00ccaa; }
+.btn:hover {
+  background: #ffb300;
+}
+
+/* Botão secundário de cadastro */
+.btn-secundario {
+  background: transparent;
+  color: #ffca28;
+  border: 1px solid #ffca28;
+  margin-top: 10px;
+}
+.btn-secundario:hover {
+  background: rgba(255, 202, 40, 0.1);
+}
