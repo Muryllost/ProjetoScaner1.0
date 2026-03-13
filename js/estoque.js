@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.querySelector("#btn-logout").addEventListener("click", () => {
   localStorage.removeItem("usuarioQR");
-  window.location.replace("index.html");
+  window.location.replace("home.html");
 });
 
 document.querySelector("#btn-limpar-estoque").addEventListener("click", () => {

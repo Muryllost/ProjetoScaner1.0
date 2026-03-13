@@ -1,5 +1,5 @@
 document.querySelector("#btn-voltar-login").addEventListener("click", () => {
-  window.location.replace("index.html");
+  window.location.replace("home.html");
 });
 
 document.querySelector("#form-cadastro").addEventListener("submit", (event) => {
@@ -13,6 +13,6 @@ document.querySelector("#form-cadastro").addEventListener("submit", (event) => {
     localStorage.setItem("listaOperadores", JSON.stringify(operadores));
 
     alert("Operador registado com sucesso!");
-    window.location.replace("index.html");
+    window.location.replace("home.html");
   }
 });
